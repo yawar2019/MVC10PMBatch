@@ -1,0 +1,40 @@
+﻿@model MVC10PMBatch.Models.EmpDept
+@{
+    ViewBag.Title = "getAllEmployeeDeptCustomize";
+}
+
+ 
+<h1>Employee</h1><br />
+<table class="table table-condensed">
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>EmpSalary</th>
+    </tr>
+    @foreach (var item in Model.Emp)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+</table><br />
+<br />
+
+<h1>Department</h1><br />
+<table class="table table-condensed">
+    <tr>
+        <th>DeptId</th>
+        <th>DeptName</th>
+        
+    </tr>
+    @foreach (var item in Model.dept)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+             
+        </tr>
+    }
+</table>

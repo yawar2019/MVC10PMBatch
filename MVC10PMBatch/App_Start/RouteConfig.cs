@@ -16,13 +16,13 @@ namespace MVC10PMBatch
             routes.MapRoute(
                 name: "Bakery",
                 url: "Bakery/Cake",
-                defaults: new { controller = "New", action = "Index", Eid = UrlParameter.Optional }
+                defaults: new { controller = "New", action = "Index", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{Eid}",
-                defaults: new { controller = "Home", action = "Index", Eid = UrlParameter.Optional }
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

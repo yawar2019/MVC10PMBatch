@@ -164,6 +164,7 @@
     <Content Include="Views\Default\EmployeeAnotherWay.cshtml" />
     <Content Include="Views\Default\getAllEmployee.cshtml" />
     <Content Include="Views\Default\getAllEmployeeDeptCustomize.cshtml" />
+    <Content Include="Views\Default\GetDifferentOutput.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -163,5 +163,40 @@ namespace MVC10PMBatch.Controllers
             //object model = obj;
             return View(listObj);
         }
+
+
+        public RedirectResult GetDifferentOutput()
+        {
+            return Redirect("http://www.facebook.com");
+        }
+        public RedirectResult GetDifferentRedirect()
+        {
+            return Redirect("~/Default/getAllEmployee");
+        }
+
+        public RedirectToRouteResult GetDifferentRoute()
+        {
+
+            //  return RedirectToRoute("Bakery");
+            return RedirectToAction("GetDifferentOutput");
+        }
+
+        public RedirectToRouteResult GetDiffControllerMthd()
+        {
+
+            //  return RedirectToRoute("Bakery");
+            return RedirectToAction("About","New",new {id=1});
+        }
+
+        public RedirectToRouteResult GetDiffControllerMthd2()
+        {
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 2;
+            obj2.EmpName = "Wilson";
+            obj2.EmpSalary = 15000;
+
+            //  return RedirectToRoute("Bakery");
+            return RedirectToAction("About2", "New", obj2);
+        }
     }
 }

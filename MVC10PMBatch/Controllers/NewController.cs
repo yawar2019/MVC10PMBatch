@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC10PMBatch.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,9 +14,14 @@ namespace MVC10PMBatch.Controllers
         {
             return "My Employee Id is " + Eid;
         }
-        public ActionResult About() {
+        public ActionResult About(int? id) {
 
-            return View("MyTest");
+            return View();
+        }
+        public ActionResult About2(EmployeeModel emp)
+        {
+
+            return View();
         }
     }
 }

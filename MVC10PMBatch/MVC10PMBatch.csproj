@@ -166,6 +166,9 @@
     <Content Include="Views\Default\getAllEmployee.cshtml" />
     <Content Include="Views\Default\getAllEmployeeDeptCustomize.cshtml" />
     <Content Include="Views\Default\GetDifferentOutput.cshtml" />
+    <Content Include="Views\Shared\_MyPartialView.cshtml" />
+    <Content Include="Views\Default\getPartialView.cshtml" />
+    <Content Include="Views\Shared\_MyPartialView2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

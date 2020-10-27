@@ -198,5 +198,64 @@ namespace MVC10PMBatch.Controllers
             //  return RedirectToRoute("Bakery");
             return RedirectToAction("About2", "New", obj2);
         }
+
+        public FileResult getMeFile() {
+            return File("~/Web.config","application/xml","web.config");
+        }
+
+        public JsonResult getjsonData()
+        {
+
+            List<EmployeeModel> emplist = new List<EmployeeModel>();
+
+
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 1;
+            obj1.EmpName = "Sai";
+            obj1.EmpSalary = 15000;
+
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 2;
+            obj2.EmpName = "Wilson";
+            obj2.EmpSalary = 15000;
+
+            EmployeeModel obj3 = new EmployeeModel();
+            obj3.EmpId = 1;
+            obj3.EmpName = "Gosh";
+            obj3.EmpSalary = 15000;
+
+            EmployeeModel obj4 = new EmployeeModel();
+            obj4.EmpId = 1;
+            obj4.EmpName = "Vali";
+            obj4.EmpSalary = 15000;
+
+            emplist.Add(obj1);
+            emplist.Add(obj2);
+            emplist.Add(obj3);
+            emplist.Add(obj4);
+
+            return Json(emplist, JsonRequestBehavior.AllowGet);
+
+        }
+
+        public ContentResult getmediffData(int ? id) {
+
+            if (id == 1)
+            {
+                return Content("Hello World");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style=color:red>Hello World</p>");
+            }
+            else
+            {
+                return Content("<script>alert('how r u');</script>");
+            }
+        }
+
+        public ActionResult getPartialView() {
+            return View();
+        }
     }
 }

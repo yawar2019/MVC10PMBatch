@@ -255,7 +255,18 @@ namespace MVC10PMBatch.Controllers
         }
 
         public ActionResult getPartialView() {
+           
             return View();
+        }
+
+        public ActionResult getPartialvuEmp()
+        {
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 1;
+            obj1.EmpName = "Sai";
+            obj1.EmpSalary = 15000;
+
+            return View(obj1);
         }
     }
 }

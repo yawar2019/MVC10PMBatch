@@ -1,0 +1,30 @@
+﻿@model MVC10PMBatch.Models.EmployeeModel
+@{
+    ViewBag.Title = "getPartialvuEmp";
+}
+
+<h2>Get Employee Details PArtial Method</h2>
+
+@{
+    var a = 10;
+    var s=Html.Partial("_EmPartialView", Model);
+    if (a == 110) {
+        @s;
+    }
+    else
+    {
+        <p>no Partial View</p>
+    }
+
+}
+<h2>Get Employee Details Render Partial Method</h2>
+@{
+    Html.RenderPartial("_EmPartialView", Model);
+}
+
+@*partial method is MVCHtmlString as return Type
+
+Render PArtial will have void (not return any result)
+
+Render Partial is more faster then partial method
+as it will not return anything*@

@@ -1,0 +1,14 @@
+﻿@model AdonetExample.Models.EmployeeModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Create</h2>
+
+<form action="~/NewEmployee/Edit" method="post">
+    <label>EmpName</label>
+    <input type="text" name="EmpName" value="@Model.EmpName" class="form-control" /><br />
+    <label>EmpSalary</label>
+    <input type="text" name="EmpSalary" value="@Model.EmpSalary" class="form-control" />
+    <input type="submit" value="Create" class="btn btn-success" />
+</form>

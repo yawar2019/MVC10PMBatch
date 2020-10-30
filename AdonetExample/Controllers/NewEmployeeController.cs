@@ -25,8 +25,22 @@ namespace AdonetExample.Controllers
         [HttpPost]
         public ActionResult Create(EmployeeModel emp)
         {
+            int i = db.SaveEmployee(emp);
+            if (i > 0) {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
 
-            return View();
+            }
+        }
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            var Employee = db.GetEmployeeById(id);
+            return View(Employee);
+             
         }
     }
 }

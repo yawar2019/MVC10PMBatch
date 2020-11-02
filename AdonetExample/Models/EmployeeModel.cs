@@ -55,7 +55,7 @@ namespace AdonetExample.Models
         public EmployeeModel GetEmployeeById(int? id)
         {
 
-            EmployeeModel   emp = new  EmployeeModel ();
+            EmployeeModel emp = new EmployeeModel();
             SqlCommand cmd = new SqlCommand("spr_employeebyId", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Eid", id);
@@ -64,13 +64,42 @@ namespace AdonetExample.Models
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                
+
                 emp.EmpId = Convert.ToInt32(dr[0]);
                 emp.EmpName = Convert.ToString(dr[1]);
                 emp.EmpSalary = Convert.ToInt32(dr[2]);
-                 
+
             }
             return emp;
+        }
+
+
+        public int UpdateEmployee(EmployeeModel obj)
+        {
+
+            SqlCommand cmd = new SqlCommand("spr_UpdateEmployee", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@EmpId", obj.EmpId);
+            cmd.Parameters.AddWithValue("@EmpName", obj.EmpName);
+            cmd.Parameters.AddWithValue("@EmpSalary", obj.EmpSalary);
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            return i;
+        }
+        
+
+             public int DeleteEmployeeById(int ?id)
+        {
+
+            SqlCommand cmd = new SqlCommand("spr_DeleteEmployee", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@EmpId", id);
+             
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            return i;
         }
     }
 }

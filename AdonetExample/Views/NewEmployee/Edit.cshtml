@@ -6,9 +6,10 @@
 <h2>Create</h2>
 
 <form action="~/NewEmployee/Edit" method="post">
+    <input type="hidden" name="EmpId" value="@Model.EmpId" />
     <label>EmpName</label>
     <input type="text" name="EmpName" value="@Model.EmpName" class="form-control" /><br />
     <label>EmpSalary</label>
     <input type="text" name="EmpSalary" value="@Model.EmpSalary" class="form-control" />
-    <input type="submit" value="Create" class="btn btn-success" />
+    <input type="submit" value="Update" class="btn btn-success" />
 </form>

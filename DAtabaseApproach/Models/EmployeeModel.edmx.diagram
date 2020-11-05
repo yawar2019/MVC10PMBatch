@@ -5,7 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1577d2604d6b480c9b7098212e8fec28" Name="Diagram1">
-        <EntityTypeShape EntityType="MVC10PMBatchDbModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC10PMBatchDbModel.Employee" Width="1.5" PointX="2.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC10PMBatchDbModel.Department" Width="1.5" PointX="5.125" PointY="1.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

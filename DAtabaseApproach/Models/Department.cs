@@ -12,12 +12,9 @@ namespace DAtabaseApproach.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Employee
+    public partial class Department
     {
-        public int EmpId { get; set; }
-        public string EmpName { get; set; }
-        public Nullable<int> EmpSalary { get; set; }
-        public string Designation { get; set; }
-        public Nullable<int> DeptId { get; set; }
+        public int DeptId { get; set; }
+        public string DeptName { get; set; }
     }
 }

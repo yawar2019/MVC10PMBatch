@@ -15,6 +15,26 @@ namespace DAtabaseApproach.Controllers
         private MVC10PMBatchDbEntities db = new MVC10PMBatchDbEntities();
 
         // GET: Employees
+
+        public ActionResult GetEmpWithDepartment()
+        {
+            var emp=(from e in db.Employees
+                     join d in db.Departments
+                     on e.DeptId equals d.DeptId
+                     select new EmpJoinDept
+                      {
+                         EmpId=e.EmpId,
+                         EmpName=e.EmpName,
+                         EmpSalary = e.EmpSalary,
+                         DeptName=d.DeptName
+                       }
+                     ).ToList();
+
+
+
+            return View(emp);
+        }
+
         public ActionResult Index()
         {
             return View(db.Employees.ToList());
@@ -46,7 +66,7 @@ namespace DAtabaseApproach.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EmpId,EmpName,EmpSalary")] Employee employee)
+        public ActionResult Create([Bind(Include = "EmpId,EmpName,EmpSalary,Designation")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +98,7 @@ namespace DAtabaseApproach.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EmpId,EmpName,EmpSalary")] Employee employee)
+        public ActionResult Edit([Bind(Include = "EmpId,EmpName,EmpSalary,Designation")] Employee employee)
         {
             if (ModelState.IsValid)
             {

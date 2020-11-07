@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Data.Entity;
 namespace CodeFirstApprocah.Controllers
 {
     public class DefaultController : Controller
@@ -35,6 +35,60 @@ namespace CodeFirstApprocah.Controllers
 
             }
 
+        }
+
+        public ActionResult Edit(int ? id ) {
+            EmployeeModel emp=db.EmployeeModels.Find(id);
+            return View(emp);
+        }
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel emp)
+        {
+            db.Entry(emp).State=EntityState.Modified;
+
+            int i = db.SaveChanges();
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+
+            }
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+            db.EmployeeModels.Remove(emp);
+
+            int i = db.SaveChanges();
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+
+            }
+
+            return View(emp);
+        }
+
+        public ActionResult Details(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+            return View(emp);
         }
     }
 }

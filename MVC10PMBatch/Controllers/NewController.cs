@@ -20,8 +20,10 @@ namespace MVC10PMBatch.Controllers
         }
         public ActionResult About2(EmployeeModel emp)
         {
-
             return View();
         }
+
+
+
     }
 }

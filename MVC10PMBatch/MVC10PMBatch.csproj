@@ -171,6 +171,8 @@
     <Content Include="Views\Shared\_MyPartialView2.cshtml" />
     <Content Include="Views\Default\getPartialvuEmp.cshtml" />
     <Content Include="Views\Shared\_EmPartialView.cshtml" />
+    <Content Include="Views\Shared\_LibraryLayout.cshtml" />
+    <Content Include="Views\Toys\GetBooks.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

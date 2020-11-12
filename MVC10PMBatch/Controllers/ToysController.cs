@@ -18,5 +18,10 @@ namespace MVC10PMBatch.Controllers
         {
             return "Long hair Dolls";
         }
+
+        public ActionResult GetBooks() {
+
+            return View();
+        }
     }
 }

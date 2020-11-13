@@ -1,0 +1,38 @@
+﻿@model MVC10PMBatch.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<div class="row">
+    <div class="col-sm-2">
+        <label>FirstName</label>
+    </div>
+    <div class="col-sm-6">
+       @Html.TextBox("FirstName", null, new { @style = "color:rebeccapurple;font-family:Georgia, 'Times New Roman', Times, serif", @class = "form-control" })<br />
+    </div>
+    <div class="col-sm-4">
+        <span style = "color:red;">FirstName Cannot be Empty</span> 
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <label>LastName</label><input type="text" id="LastName" name="LastName" value="" style="color:burlywood;font-family:'Times New Roman', Times, serif" class="form-control" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <label>MiddleName</label>@Html.TextBoxFor(v => v.EmpName, new { @style = "color:red;font-family:Georgia, 'Times New Roman', Times, serif", @class = "form-control" })
+    </div>
+</div><br />
+
+ @using (Html.BeginForm("Index", "Toys", FormMethod.Post, new { enctype = "multipart/form-data" }))
+ {
+    <span>File</span>
+    <input type="file" id="fileupload" name="fileupload" />
+    <input type="submit" value="upload" />
+ }
+@ViewBag.msg

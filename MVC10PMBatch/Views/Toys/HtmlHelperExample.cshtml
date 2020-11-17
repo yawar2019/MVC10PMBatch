@@ -3,6 +3,11 @@
     ViewBag.Title = "HtmlHelperExample";
     Layout = "~/Views/Shared/_LibraryLayout.cshtml";
 }
+<script>
+    function fun() {
+        alert('hello World');
+    }
+</script>
 
 <h2>HtmlHelperExample</h2>
 
@@ -11,7 +16,7 @@
         <label>FirstName</label>
     </div>
     <div class="col-sm-6">
-       @Html.TextBox("FirstName", null, new { @style = "color:rebeccapurple;font-family:Georgia, 'Times New Roman', Times, serif", @class = "form-control" })<br />
+       @Html.TextBox("FirstName", null, new { @style = "color:rebeccapurple;font-family:Georgia, 'Times New Roman', Times, serif", @class = "form-control", @onmouseover = "fun()" })<br />
     </div>
     <div class="col-sm-4">
         <span style = "color:red;">FirstName Cannot be Empty</span> 
@@ -20,7 +25,7 @@
 
 <div class="row">
     <div class="col-sm-6">
-        <label>LastName</label><input type="text" id="LastName" name="LastName" value="" style="color:burlywood;font-family:'Times New Roman', Times, serif" class="form-control" />
+        <label>LastName</label><input type="text" id="LastName" name="LastName" value="" style="color:burlywood;font-family:'Times New Roman', Times, serif" class="form-control" onmouseover="fun()" />
     </div>
 </div>
 <div class="row">
@@ -28,6 +33,19 @@
         <label>MiddleName</label>@Html.TextBoxFor(v => v.EmpName, new { @style = "color:red;font-family:Georgia, 'Times New Roman', Times, serif", @class = "form-control" })
     </div>
 </div><br />
+
+
+<span>Male</span>:@Html.RadioButton("Gender","Male",true)
+<span>FeMale</span>:@Html.RadioButton("Gender", "FeMale")
+
+
+@Html.DropDownList("Country",new List<SelectListItem>() {
+
+    new SelectListItem {Text="India",Value="1" },
+    new SelectListItem {Text="China",Value="2" },
+    new SelectListItem {Text="Bangladesh",Value="3",Selected=true,Disabled=true },
+},"Select Country")
+
 
  @using (Html.BeginForm("Index", "Toys", FormMethod.Post, new { enctype = "multipart/form-data" }))
  {

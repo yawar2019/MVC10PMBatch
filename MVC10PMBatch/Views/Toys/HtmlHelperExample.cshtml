@@ -1,4 +1,5 @@
 ﻿@model MVC10PMBatch.Models.EmployeeModel
+@using MVC10PMBatch.CustomizeControl
 @{
     ViewBag.Title = "HtmlHelperExample";
     Layout = "~/Views/Shared/_LibraryLayout.cshtml";
@@ -47,6 +48,10 @@
 },"Select Country")
 
 
+@Html.DropDownList("Product")<br />
+@Html.DropDownList("Items",(IEnumerable<SelectListItem>)ViewBag.Product,"Select Product")
+
+
  @using (Html.BeginForm("Index", "Toys", FormMethod.Post, new { enctype = "multipart/form-data" }))
  {
     <span>File</span>
@@ -54,3 +59,14 @@
     <input type="submit" value="upload" />
  }
 @ViewBag.msg
+@Html.createUrControl("text","background-color:red;")<br />
+@Html.createUrControl("checkbox", "background-color:green;")
+@Html.createUrControl("radio", "background-color:blue;")
+
+@myControl.MyLabel("I Accepted the Agreement")
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("hello world")

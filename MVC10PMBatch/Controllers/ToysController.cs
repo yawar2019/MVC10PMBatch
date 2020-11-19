@@ -30,12 +30,17 @@ namespace MVC10PMBatch.Controllers
         {
             EmployeeModel emp = new Models.EmployeeModel();
             emp.EmpName = "varma";
+
+            dbMyOnlineShoppingEntities db = new Models.dbMyOnlineShoppingEntities();
+            ViewBag.Product = new SelectList(db.Tbl_Product, "ProductId", "ProductName",19);
+
             return View(emp);
 
         }
 
         public ActionResult Index()
         {
+            
             return View("HtmlHelperExample");
         }
         [HttpPost]
@@ -49,5 +54,23 @@ namespace MVC10PMBatch.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult GetValidationExample() {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult GetValidationExample(RegisterModel reg)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(reg);
+
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }

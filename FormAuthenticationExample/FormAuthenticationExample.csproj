@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{576CB5E9-62F4-4448-844E-6A6031286214}</ProjectGuid>
+    <ProjectGuid>{B7A81F52-DF9C-4217-BFFA-A34208E4B2FE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MVC10PMBatch</RootNamespace>
-    <AssemblyName>MVC10PMBatch</AssemblyName>
+    <RootNamespace>FormAuthenticationExample</RootNamespace>
+    <AssemblyName>FormAuthenticationExample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -43,14 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -84,8 +76,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -132,72 +122,24 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\OnLineShopModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>OnLineShopModel.Context.cs</LastGenOutput>
-      <DependentUpon>OnLineShopModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\OnLineShopModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OnLineShopModel.edmx</DependentUpon>
-      <LastGenOutput>OnLineShopModel.cs</LastGenOutput>
-    </Content>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="ActionResult %281%29.pdf" />
-    <Content Include="Document\Html helpers.docx" />
-    <EntityDeploy Include="Models\OnLineShopModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>OnLineShopModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\OnLineShopModel.edmx.diagram">
-      <DependentUpon>OnLineShopModel.edmx</DependentUpon>
-    </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
-    <None Include="scripts\jquery.validate-vsdoc.js" />
-    <Content Include="scripts\jquery.validate.js" />
-    <Content Include="scripts\jquery.validate.min.js" />
-    <Content Include="scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
+    <Content Include="Views\Login\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\NewController.cs" />
-    <Compile Include="Controllers\ToysController.cs" />
-    <Compile Include="CustomizeControl\myControl.cs" />
-    <Compile Include="Filter\MyFilter.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DepartmentModel.cs" />
-    <Compile Include="Models\EmpDept.cs" />
-    <Compile Include="Models\EmployeeModel.cs" />
-    <Compile Include="Models\OnLineShopModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OnLineShopModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OnLineShopModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OnLineShopModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OnLineShopModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OnLineShopModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RegisterModel.cs" />
-    <Compile Include="Models\Tbl_Product.cs">
-      <DependentUpon>OnLineShopModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,28 +150,11 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\New\About.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\New\MyTest.cshtml" />
-    <Content Include="Views\Default\Index.cshtml" />
-    <Content Include="Views\Default\GetEmployees.cshtml" />
-    <Content Include="Views\Default\EmployeeAnotherWay.cshtml" />
-    <Content Include="Views\Default\getAllEmployee.cshtml" />
-    <Content Include="Views\Default\getAllEmployeeDeptCustomize.cshtml" />
-    <Content Include="Views\Default\GetDifferentOutput.cshtml" />
-    <Content Include="Views\Shared\_MyPartialView.cshtml" />
-    <Content Include="Views\Default\getPartialView.cshtml" />
-    <Content Include="Views\Shared\_MyPartialView2.cshtml" />
-    <Content Include="Views\Default\getPartialvuEmp.cshtml" />
-    <Content Include="Views\Shared\_EmPartialView.cshtml" />
-    <Content Include="Views\Shared\_LibraryLayout.cshtml" />
-    <Content Include="Views\Toys\GetBooks.cshtml" />
-    <Content Include="Views\Toys\HtmlHelperExample.cshtml" />
-    <Content Include="Views\Toys\GetValidationExample.cshtml" />
-    <Content Include="Views\Default\TestPlayer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -239,10 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="upload\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -257,9 +178,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50975</DevelopmentServerPort>
+          <DevelopmentServerPort>54944</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50975/</IISUrl>
+          <IISUrl>http://localhost:54944/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

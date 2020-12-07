@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApprocah", "CodeFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{79EFD5C4-2A6D-407E-B420-43E3C4B691B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{F4DFFECC-6946-43F5-A879-8EB318A98A0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormAuthenticationExample", "FormAuthenticationExample\FormAuthenticationExample.csproj", "{B7A81F52-DF9C-4217-BFFA-A34208E4B2FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{79EFD5C4-2A6D-407E-B420-43E3C4B691B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79EFD5C4-2A6D-407E-B420-43E3C4B691B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79EFD5C4-2A6D-407E-B420-43E3C4B691B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DFFECC-6946-43F5-A879-8EB318A98A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DFFECC-6946-43F5-A879-8EB318A98A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DFFECC-6946-43F5-A879-8EB318A98A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DFFECC-6946-43F5-A879-8EB318A98A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A81F52-DF9C-4217-BFFA-A34208E4B2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A81F52-DF9C-4217-BFFA-A34208E4B2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A81F52-DF9C-4217-BFFA-A34208E4B2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A81F52-DF9C-4217-BFFA-A34208E4B2FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

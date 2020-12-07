@@ -4,13 +4,22 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVC10PMBatch.Models;
+using MVC10PMBatch.Filter;
 namespace MVC10PMBatch.Controllers
 {
+   
     public class DefaultController : Controller
     {
         // GET: Default Controller got Changed
+        [MyFilter]
+        public ActionResult TestPlayer() {
+            ViewBag.Player = "Dhoni";
+            return View();
+        }
+
         public ActionResult Index()
         {
+          
             EmployeeModel obj = new EmployeeModel();
             obj.EmpId = 1;
             obj.EmpName = "Sai";

@@ -18,5 +18,9 @@ namespace WebApi.Controllers
         {
             return View();
         }
+        public ActionResult AngularExample()
+        {
+            return View();
+        }
     }
 }

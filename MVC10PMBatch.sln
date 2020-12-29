@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{49324F62-7B70-4F3F-A015-D61859F9A573}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationExample", "AuthorizationExample\AuthorizationExample.csproj", "{88B17E92-38ED-4DB0-8698-8FE460FC34D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,10 @@ Global
 		{49324F62-7B70-4F3F-A015-D61859F9A573}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49324F62-7B70-4F3F-A015-D61859F9A573}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49324F62-7B70-4F3F-A015-D61859F9A573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B17E92-38ED-4DB0-8698-8FE460FC34D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B17E92-38ED-4DB0-8698-8FE460FC34D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B17E92-38ED-4DB0-8698-8FE460FC34D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B17E92-38ED-4DB0-8698-8FE460FC34D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
